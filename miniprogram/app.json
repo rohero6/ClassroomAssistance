@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/appointment/appointment",
+    "pages/classroom/classroom"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "课室助手+",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#CCCCCC",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/classroom/classroom",
+        "text": "课室",
+        "iconPath": "images/classroom.png",
+        "selectedIconPath": "images/classroom-a.png"
+      },
+      {
+        "pagePath": "pages/appointment/appointment",
+        "text": "预约",
+        "iconPath": "images/appointment.png",
+        "selectedIconPath": "images/appointment-a.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-a.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
