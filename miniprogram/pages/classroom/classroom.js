@@ -1,11 +1,29 @@
 // pages/classroom/classroom.js
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    value: '',
+    classroom: ['文科楼\n101', '文科楼\n102', '文科楼\n103', '文科楼\n104', '文科楼\n105', '文科楼\n106', '文科楼\n107', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201', '文科楼\n108', '文科楼\n201']
+  },
 
+  //搜索方法
+  onChange(e) {
+    this.setData({
+      value: e.detail
+    });
+  },
+  onSearch() {
+      wx.showToast({
+        title: '搜索',
+      })
+  
+  },
+  onClick() {
+    Toast('搜索' + this.data.value);
   },
 
   /**

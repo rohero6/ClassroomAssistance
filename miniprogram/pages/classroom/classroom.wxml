@@ -1,2 +1,17 @@
-<!--pages/classroom/classroom.wxml-->
-<text>pages/classroom/classroom.wxml</text>
+<scroll-view>
+<van-search
+  value="{{ value }}"
+  placeholder="文科楼201"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+/>
+
+<van-grid gutter="{{ 10 }}">
+<block wx:for="{{classroom}}" wx:key="{{index}}">
+  <van-grid-item icon="records"  text="{{item}}"  />
+  
+  </block>
+</van-grid>
+
+</scroll-view>
