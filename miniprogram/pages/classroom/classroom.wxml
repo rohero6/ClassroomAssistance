@@ -1,11 +1,13 @@
 <scroll-view>
 <van-search
   value="{{ value }}"
-  placeholder="文科楼201"
-  show-action
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
   bind:search="onSearch"
-  bind:cancel="onCancel"
-/>
+  right-icon="apps-o"
+>
+</van-search>
 
 <van-grid gutter="{{ 10 }}">
 <block wx:for="{{classroom}}" wx:key="{{index}}">
