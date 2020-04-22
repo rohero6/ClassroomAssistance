@@ -1,1 +1,10 @@
-/* pages/classroom/classroom.wxss */
+.divider{
+  height: 5%;
+  width: 100%;
+  border-bottom: solid 1px rgb(216, 210, 210);
+  background: white;
+}
+.dropdownMenu{
+  /* height: 80rpx; */
+  border-bottom: solid 1px rgb(216, 210, 210);
+}
