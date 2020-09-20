@@ -8,6 +8,8 @@
 >
 </van-search>
 
+
+
 <van-dropdown-menu class="dropdownMenu">
   <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
   <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
@@ -19,9 +21,10 @@
 <scroll-view >
 <van-grid gutter="{{ 10 }}">
 <block wx:for="{{classroom}}" wx:key="{{index}}">
-  <van-grid-item icon="records"  text="{{item}}"  />
+  <van-grid-item icon="records" link-type="navigateTo" url="/pages/appointment/appointment?classroomDeatil={{item}}"  text="{{item}}"  />
   
   </block>
 </van-grid>
 
 </scroll-view>
+
