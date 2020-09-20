@@ -1,0 +1,38 @@
+<!--pages/modify/modify.wxml-->
+<form bindsubmit="formSubmit" report-submit="true">
+  <view class="section">
+    <view class="section-title">姓名：</view>
+    <view>
+      <input type="text" name="username" value="{{username}}" bindblur="nameChange" placeholder="请输入姓名" />
+    </view>
+  </view>
+  <view class="section">
+    <view class="section-title">性别：</view>
+    <view>
+      <radio-group name="gender">
+        <label><radio value="男" checked="{{gender==='1'||gender==='男' ? 'checked' : ''}}" />男</label>
+        <label><radio value="女" checked="{{gender==='2'||gender==='女' ? 'checked' : ''}}" />女</label>
+      </radio-group>
+    </view>
+  </view>
+    <view class="section">
+    <view class="section-title">学院：</view>
+    <view>
+      <input type="text" name="xueyuan" value="{{xueyuan}}"  placeholder="请输入学院" />
+    </view>
+  </view>
+    <view class="section">
+    <view class="section-title">专业：</view>
+    <view>
+      <input type="text" name="zhuangye" value="{{zhuangye}}" placeholder="请输入专业" />
+    </view>
+  </view>
+      <view class="section">
+    <view class="section-title">学号：</view>
+    <view>
+      <input type="number" name="xuehao" value="{{xuehao}}"  placeholder="请输入学号" />
+    </view>
+  </view>
+  <button formType="submit" type="primary">保存</button>
+</form>
+<van-dialog id="van-dialog" />

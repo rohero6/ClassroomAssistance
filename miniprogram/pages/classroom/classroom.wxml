@@ -1,30 +1,34 @@
 
-<van-search
-  value="{{ value }}"
-  placeholder="请输入搜索关键词"
-  use-action-slot
-  bind:change="onChange"
-  bind:search="onSearch"
->
-</van-search>
-
-
-
-<van-dropdown-menu class="dropdownMenu">
-  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
-  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
-
-</van-dropdown-menu>
-
-
-
-<scroll-view >
-<van-grid gutter="{{ 10 }}">
-<block wx:for="{{classroom}}" wx:key="{{index}}">
-  <van-grid-item icon="records" link-type="navigateTo" url="/pages/appointment/appointment?classroomDeatil={{item}}"  text="{{item}}"  />
-  
-  </block>
-</van-grid>
-
-</scroll-view>
+<!-- 标签页标题 -->
+<view class="tab">
+  <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">文科楼</view>
+  <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">理科楼</view>
+  <view class="tab-item {{tab==2?'active':''}}" bindtap="changeItem" data-item="2">信息楼</view>
+</view>
+<!-- 内容区域 -->
+<view class="content">
+  <swiper current="{{item}}" bindchange="changeTab">
+    <swiper-item>
+      <!-- 内容滚动区域 -->
+      <scroll-view class="content-info" scroll-y>
+      <scroll-view >
+      <van-grid gutter="{{ 10 }}">
+      <block wx:for="{{classroom}}" wx:key="{{index}}">
+      <van-grid-item icon="records" link-type="navigateTo" url="/pages/appointment/appointment?classroomDeatil={{item}}"  text="{{item}}"  />
+      </block>
+      </van-grid>
+      </scroll-view>
+      </scroll-view>
+    </swiper-item>
+    <!-- 理科楼 -->
+    <swiper-item>
+      <include src="like.wxml" />
+    </swiper-item>
+    <!-- 信息楼 -->
+    <swiper-item>
+      <include src="xinxi.wxml" />
+    </swiper-item>
+    </swiper>
+</view>
+<van-dialog id="van-dialog" />
 

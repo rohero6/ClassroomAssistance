@@ -1,0 +1,7 @@
+<!--pages/success/success.wxml-->
+<view>
+  <image src="/images/success2.png"></image>
+</view>
+<text class="text">已成功预约</text>
+
+ <button type="primary" plain="true" style=" width: 60%;margin-top:100rpx;" bindtap="fanhui">返回</button>

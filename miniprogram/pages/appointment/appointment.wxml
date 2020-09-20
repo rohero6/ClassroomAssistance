@@ -1,23 +1,44 @@
-<van-cell title="请选择预约日期" value="{{ date }}" bind:click="onDisplay" />
-<van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+<!--pages/appointment/appointment.wxml-->
+<van-cell title-class="title" title="教室"  value="{{ classroom }}" size="large" />
+<van-cell title-class="title" title="日期" value="{{ date }}" bind:click="onDisplay" size="large" />
+<van-cell title-class="title" title="开始时间" bind:click="showPopup" value="{{ currentDate }}" size="large" />
+<van-popup show="{{ showtime }}" position="bottom" bind:close="onClose">
+<van-datetime-picker
+  type="time"
+  value="{{ currentDate }}"
+  min-hour="{{ minHour }}"
+  max-hour="{{ maxHour }}"
+  bind:input="onInput"
+  bind:confirm="onClose"
+  bind:cancel="onClose"
+  title="开始时间"
+/>
+  </van-popup>
 
-<van-cell-group>
-  <van-field
-    value="{{ username }}"
-    required
-    clearable
-    label="用户名"
-    icon="question-o"
-    placeholder="请输入用户名"
-    bind:click-icon="onClickIcon"
-  />
+<van-popup show="{{ showtimeEnd }}" position="bottom" bind:close="onClose">
+<van-datetime-picker
+  type="time"
+  value="{{ currentDateEnd }}"
+  min-hour="{{ minHour }}"
+  max-hour="{{ maxHour }}"
+  bind:input="onInputEnd"
+  bind:confirm="onClose"
+  bind:cancel="onClose"
+  title="结束时间"
+/>
+</van-popup>
+  
+<van-popup show="{{ showdate }}" position="bottom" bind:close="onClose">
+<van-calendar title="预约日期" row-height="40" show="{{ showdate }}" bind:close="onClose" bind:confirm="onConfirm" 
+  show-mark='{{flase}}'
+  show-title='{{flase}}' 
+  
+ />
+  
+  </van-popup>
 
-  <van-field
-    value="{{ password }}"
-    type="password"
-    label="密码"
-    placeholder="请输入密码"
-    required
-    border="{{ false }}"
-  />
-</van-cell-group>
+<van-cell title-class="title" title="结束时间" bind:click="showPopupEnd" value="{{ currentDateEnd }}" size="large" />
+
+<button bindtap="jump" type="primary">立即预约</button>
+
+<van-dialog id="van-dialog" />

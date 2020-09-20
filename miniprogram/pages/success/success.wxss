@@ -1,0 +1,17 @@
+/* pages/success/success.wxss */
+view{
+  width: 100%;
+  height: 600rpx;
+  /* 水平垂直居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+view>image{
+  width: 300rpx;
+  height: 300rpx;
+}
+.text{
+  text-align: center;
+  font-weight: bold;
+}

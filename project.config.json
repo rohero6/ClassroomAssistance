@@ -6,6 +6,7 @@
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
@@ -13,9 +14,11 @@
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
+		"uglifyFileName": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
@@ -26,10 +29,11 @@
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx48c3861b791c310f",
-	"projectname": "ClassroomAssistance",
-	"libVersion": "2.8.1",
+	"projectname": "ClassroomAssistance-master1",
+	"libVersion": "2.11.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -68,8 +72,43 @@
 				},
 				{
 					"id": -1,
+					"name": "pages/classroom/classroom",
+					"pathName": "pages/classroom/classroom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
 					"name": "pages/appointment/appointment",
 					"pathName": "pages/appointment/appointment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/person/person",
+					"pathName": "pages/person/person",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/success/success",
+					"pathName": "pages/success/success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/modify/modify",
+					"pathName": "pages/modify/modify",
 					"scene": null
 				}
 			]

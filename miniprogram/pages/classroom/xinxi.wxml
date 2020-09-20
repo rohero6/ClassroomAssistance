@@ -1,0 +1,10 @@
+<!-- 内容滚动区域 -->
+      <scroll-view class="content-info" scroll-y>
+      <scroll-view >
+      <van-grid gutter="{{ 10 }}">
+      <block wx:for="{{classroom3}}" wx:key="{{index}}">
+      <van-grid-item icon="records" link-type="navigateTo" url="/pages/appointment/appointment?classroomDeatil={{item}}"  text="{{item}}"  />
+      </block>
+      </van-grid>
+      </scroll-view>
+      </scroll-view>

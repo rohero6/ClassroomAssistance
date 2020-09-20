@@ -1,0 +1,29 @@
+<view class='userinfo'>
+<view wx:if="{{!canIUse}}">
+    <view><image bindtap="toPerson" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image></view>
+    <text class="userinfo-nickname" bindtap="toPerson" >{{name!==''? name:userInfo.nickName}}</text>
+  </view>
+<button class='userinfo-btn' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+微信登录
+</button>
+</view>
+
+<view class="person-list">
+ 
+  <view class="list-item">
+    <image class="item-image"   src="../../images/person-information.png"></image>
+    <text bindtap='person' class="item-text">个人信息　　　　　　</text>
+    <text wx:if="{{personCarnum&&!canIUse}}" class="carNumber">2017118103</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../images/appoinment2.png"></image>
+    <text bindtap="jilu" class="item-text">我的预约</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../images/message.png"></image>
+    <text bindtap="getquanxian" class="item-text">消息订阅</text>
+  </view>
+  </view>
+ <van-dialog id="van-dialog" />

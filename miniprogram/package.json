@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vant/weapp": "^1.2.1"
+    "@vant/weapp": "^1.2.1",
+    "lin-ui": "^0.8.0"
   }
 }

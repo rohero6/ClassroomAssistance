@@ -1,0 +1,23 @@
+<van-notice-bar
+  left-icon="bullhorn-o"
+  color="black"
+  backgroundColor="white"
+  mode="closeable"
+  text="左滑可取消预约哦~"
+/>
+<van-dialog id="van-dialog" />
+<van-notify id="van-notify" />
+
+
+
+<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{jilu}}" wx:key="">
+    <view class='content' bindtap='showDetail' data-index="{{index}}">
+    <view class='left-con'>
+      <text class='left-title'>教室:{{item.classroomNumber}}</text>
+      <text class='left-date'  > 日期:{{item.date}}</text>
+      <text class='left-time'  > 时间:{{item.start}}-{{item.end}}</text>
+    </view> 
+    </view>
+    <view class="del" catchtap="cancel" data-indexdel="{{index}}"  data-docid="{{item._id}}">取消</view>
+    
+</view>

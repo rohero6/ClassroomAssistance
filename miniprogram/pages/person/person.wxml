@@ -1,0 +1,48 @@
+<!--pages/detail/detail.wxml-->
+<view class="info">
+  <!-- 头像 -->
+  <view >
+    <view class="fl">头像</view>
+    <view class="avatar" >
+      <open-data type="userAvatarUrl" ></open-data>
+    </view>
+  </view>
+  <!-- 姓名 -->
+  <view>
+    <view class="fl">姓名</view>
+    <view class="r1">{{username}}
+     
+  </view>
+  <!-- 性别 -->
+  </view>
+  <view>
+    <view class="fl">性别</view>
+    <view class="r1"><open-data type="userGender" lang="zh_CN"></open-data></view>
+    
+  </view>
+    <!-- 学院 -->
+  <view>
+    <view class="fl">学院</view>
+    <view class="rl">
+    {{xueyuan}}
+     
+    </view>
+  </view>
+    <!-- 专业 -->
+  <view>
+    <view class="fl">专业</view>
+    <view class="rl">
+    {{zhuangye}}
+    
+    </view>
+  </view>
+    <!-- 学号 -->
+  <view>
+    <view class="fl">学号</view>
+    <view class="rl">{{xuehao}}
+    
+    </view>
+  </view>
+  <!-- 性别 -->
+  <button bindtap="jump" type="primary">编辑资料</button>
+</view>

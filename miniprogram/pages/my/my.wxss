@@ -1,0 +1,73 @@
+/**index.wxss**/
+.userinfo {
+ display: flex;
+flex-direction: column;
+align-items: center;
+background: #0099ff; 
+width: 100%; 
+height: 300rpx;
+}
+.borderBottom{
+  border-bottom:1px solid #ccc;
+}
+
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+  align-items: center;
+  
+}
+
+.userinfo-nickname {
+  color: white;
+  align-items: center;
+}
+
+.usermotto {
+  margin-top: 200px;
+  border-bottom: 3px solid #ccc;
+}
+.userinfo-btn{
+  margin-top: 50rpx;  
+    background: none !important;  
+    color: #fff !important;  
+    font-size: 40rpx;
+    border: 1px solid #fff;
+}
+.person-line {  
+    width: 80%;  
+    height: 2rpx;  
+    background: lightgray;  
+    margin-left: 90rpx;
+}
+.item-text {  
+    color: gray;  
+    font-size: 30rpx;  
+    margin-left: 20rpx;
+}
+.item-image {  
+    width: 60rpx;  
+    height: 60rpx;  
+    margin: 20rpx;
+}
+
+.person-list {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: left;
+}
+
+.list-item {      
+    display: flex;  
+    flex-direction: row;  
+    align-items: center;  
+    height: 80rpx;
+    
+}
+.carNumber{
+   color: gray;  
+   font-size: 40rpx;
+   border: 1px solid #ccc;
+}
